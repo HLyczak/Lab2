@@ -40,3 +40,4 @@ namespace Lab2
             Console.WriteLine("student1 == student3: " + student1.Equals(student3)); // Output: student1 == student3: false
         }
     }
+}

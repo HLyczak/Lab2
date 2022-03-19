@@ -1,47 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-//+ to składnik publiczny (public)
-//# to składnik chroniony (protected)
-//-to składnik prywatny(private)
-//~to składnik dostępny w obrębie projektu (package)
-
-namespace Lab2
+﻿namespace Lab2
 {
-    internal class Person
+    public class Person
     {
         public Person(string name, int age)
         {
+            this.Name = name;
+            this.Age = age;
         }
 
-        private string imie;
-        private int age;
+        protected string name;
+        protected int age;
 
-        public string Name { get; set; }
-        public int Age { get; set; }
-    }
+        public string Name
+        {
+            get => name;
+            set { name = value; }
+        }
 
-    public class Student
-    { //#->private
-        private string group;
-        private List<Task> tasks = new List<Task>();
-    }
+        public int Age
+        {
+            get => age;
+            set { age = value; }
+        }
 
-    public class Task
-    {
-        public string name;
-        public TaskStatus status;
+        public bool Equals(Person other)
+        {
+            return this.Age == other.Age && this.Name == other.Name; //można usunąć this
+        }
 
-        public string Name { get; set; }
-        public TaskStatus Status { get; set; }
-    }
-
-    public enum TaskStatus
-    {
-        Waiting,
-        Progress,
-        Done,
-        Rejected
+        public override string ToString() => $" {Name}, ({Age} y.o.)";
     }
 }
