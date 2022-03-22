@@ -11,7 +11,7 @@
             set { name = value; }
         }
 
-        private Classroom(string Name, Person[] persons)
+        public Classroom(string Name, Person[] persons)
         {
             this.Name = name;
             this.persons = persons;

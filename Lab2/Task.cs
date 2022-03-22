@@ -10,8 +10,10 @@
 
         public Task(string Name, TaskStatus Status)
         {
+            this.Name = Name;
+            this.Status = Status;
         }
 
-        public override string ToString() => $" {Ne}, ({Age} y.o.)";
+        public override string ToString() => $" {Name}, ({Status} y.o.)";
     }
 }
