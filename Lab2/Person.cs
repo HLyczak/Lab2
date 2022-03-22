@@ -7,6 +7,8 @@
             this.Name = name;
             this.Age = age;
         }
+        protected string imie;
+        protected int age;
 
         protected string name;
         protected int age;
