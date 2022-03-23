@@ -1,4 +1,6 @@
-﻿namespace Lab2
+﻿using System;
+
+namespace Lab2
 {
     public class Task
     {
@@ -14,6 +16,6 @@
             this.Status = Status;
         }
 
-        public override string ToString() => $" {Name}, ({Status} y.o.)";
+        public override string ToString() => $" {Name} [{Status}]{Environment.NewLine}";
     }
 }

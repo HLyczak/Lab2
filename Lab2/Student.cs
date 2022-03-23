@@ -50,8 +50,17 @@ namespace Lab2
 
         public override string ToString()
         {
-            return base.ToString();
+            string b = $"{Environment.NewLine}Student:  {Name} ({Age} y.o.){Environment.NewLine}Group: {group}{Environment.NewLine}Tasks:{Environment.NewLine}";
+            int j = 1;
+            foreach (var i in tasks)
+            {
+                b += j + "." + i.ToString();
+                j++;
+            }
+            return b;
         }
+
+        // $"Student:  {Name}, ({Age} y.o.){Environment.NewLine}Group: {group}{Environment.NewLine}";
 
         public bool Equals(Student other)
         {

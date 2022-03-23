@@ -1,4 +1,6 @@
-﻿namespace Lab2
+﻿using System;
+
+namespace Lab2
 {
     public class Classroom
     {
@@ -17,6 +19,14 @@
             this.persons = persons;
         }
 
-        public override string ToString() => $" {Name}, ({persons[0]} )({persons[1]} )";
+        public override string ToString()
+        {
+            string a = $"Classroom: Sala Komputerowa {Environment.NewLine}";
+            foreach (var i in persons)
+            {
+                a += i.ToString();
+            }
+            return a;
+        }
     }
 }
